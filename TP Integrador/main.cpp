@@ -1,8 +1,12 @@
 #include <SFML/Graphics.hpp>
+#include "Crosshair.h"
 
 int main(int argc, const char* argv[]) {
 
 	using namespace sf;
+
+	//Objeto Crosshair.
+	Crosshair crosshair;
 
 	//Crear la ventana SFML.
 	RenderWindow window(VideoMode(800, 600), "Trabajo práctico integrador.");
