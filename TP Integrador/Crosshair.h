@@ -3,8 +3,7 @@
 
 using namespace sf;
 
-class Crosshair
-{
+class Crosshair {
 private:
 	//Atributos
 	Texture texCrosshair;
@@ -13,18 +12,12 @@ public:
 	//Constructor.
 	Crosshair();
 
-	//Función para dibujar el sprite en la ventana.
-	void DibujarCrosshair(RenderWindow* ven) {
-		ven->draw(sprCrosshair);
-	}
-	
-	//Función para centrar el mouse en el centro del crosshair.
-	void CentroCrosshair(float x, float y) {
-		sprCrosshair.setPosition(x, y);
-	}
+	//Método para inicializar la textura/sprite del crosshair y configurarlo.
+	void Inicializar();
 
-	//Función declarada como Vector2f para obtener la posición del crosshair.
-	Vector2f Posicion() {
-		return sprCrosshair.getPosition();
-	}
+	//Método para dibujar el crosshair.
+	void Dibujar(RenderWindow& ven);
+
+	//Método para posicionar el centro del sprite en el mouse.
+	void CentroCrosshair(RenderWindow& ven);
 };

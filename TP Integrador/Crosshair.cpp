@@ -1,8 +1,9 @@
 #include "Crosshair.h"
 
 //Constructor.
-Crosshair::Crosshair() {
-	
+Crosshair::Crosshair() {}
+
+void Crosshair::Inicializar() {
 	//Cargamos la textura y el sprite del crosshair.
 	texCrosshair.loadFromFile("Imagenes//Crosshair.png");
 
@@ -16,4 +17,16 @@ Crosshair::Crosshair() {
 
 	//Centrar el origen del sprite.
 	sprCrosshair.setOrigin(tam.x / 2.0f, tam.y / 2.0f);
+}
+
+void Crosshair::Dibujar(RenderWindow& ven) {
+	ven.draw(sprCrosshair);
+
+	CentroCrosshair(ven);
+}
+
+void Crosshair::CentroCrosshair(RenderWindow& ven) {
+	Vector2i posMouse = Mouse::getPosition(ven);
+
+	sprCrosshair.setPosition(posMouse.x, posMouse.y);
 }
