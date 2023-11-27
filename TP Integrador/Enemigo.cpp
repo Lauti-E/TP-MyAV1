@@ -21,3 +21,13 @@ void Enemigo::InicializarTexturas() {
 void Enemigo::DibujarEnemigos(RenderWindow& ven) {
 	ven.draw(sprEnemigo1);
 }
+
+bool Enemigo::EnemigoClick(float x, float y) const {
+	//Verificar si las coordenadas (x, y) están dentro del sprite del enemigo.
+	return sprEnemigo1.getGlobalBounds().contains(x, y);
+}
+
+void Enemigo::EliminarEnemigo() {
+	//"Eliminar" enemigo, moverlo fuera de la ventana.
+	sprEnemigo1.setPosition(-1000.f, -1000.f);
+}

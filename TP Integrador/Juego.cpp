@@ -30,6 +30,19 @@ void Juego::ProcesarEventos() {
 		if (eventos.type == Event::Closed) {
 			ventana.close();
 		}
+
+		if (Mouse::isButtonPressed(Mouse::Left)) {
+			
+			//Obtener la posición del mouse.
+			Vector2i mousePos = Mouse::getPosition(ventana);
+
+			//Verificar si el clic fue dentro del sprite del enemigo.
+			if (enemigo.EnemigoClick(mousePos.x, mousePos.y)) {
+				
+				//"Eliminar" el enemigo.
+				enemigo.EliminarEnemigo();
+			}
+		}
 	}
 }
 

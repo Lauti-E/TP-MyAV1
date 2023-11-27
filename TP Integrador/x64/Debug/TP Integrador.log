@@ -1,2 +1,15 @@
 ﻿  Enemigo.cpp
+  Juego.cpp
+C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(40,49): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+          with
+          [
+              T=int
+          ]
+C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(40,37): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+          with
+          [
+              T=int
+          ]
+  main.cpp
+  Generando código...
   TP Integrador.vcxproj -> C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\x64\Debug\TP Integrador.exe

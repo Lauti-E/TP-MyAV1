@@ -19,5 +19,11 @@ public:
 
 	//Método para dibujar los enemigos en la ventana.
 	void DibujarEnemigos(RenderWindow& ven);
+
+	//Método para verificar si el enemigo fue clickeado.
+	bool EnemigoClick(float x, float y) const;
+
+	//Método para eliminar el enemigo.
+	void EliminarEnemigo();
 };
 
