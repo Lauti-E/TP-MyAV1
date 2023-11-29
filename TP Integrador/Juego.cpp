@@ -10,7 +10,10 @@ Juego::Juego() : ventana(VideoMode(800, 600), "Trabajo práctico integrador.") {
 
 	//Inicializar la mira.
 	crosshair.Inicializar();
+
+	//Inicializar el enemigo y su posición.
 	enemigo.InicializarTexturas();
+	enemigo.PosicionInicial();
 
 	//Ocultar el cursor.
 	ventana.setMouseCursorVisible(false);
@@ -19,6 +22,9 @@ Juego::Juego() : ventana(VideoMode(800, 600), "Trabajo práctico integrador.") {
 void Juego::General() {
 	while (ventana.isOpen()) {
 		ProcesarEventos();
+
+		enemigo.Actualizar();
+
 		Dibujar();
 	}
 }
