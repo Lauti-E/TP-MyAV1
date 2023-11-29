@@ -27,6 +27,12 @@
     <ClCompile Include="Enemigo.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="EnemigoTipo1.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemigoTipo2.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Crosshair.h">
@@ -36,6 +42,12 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Enemigo.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemigoTipo1.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemigoTipo2.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

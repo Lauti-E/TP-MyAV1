@@ -135,12 +135,16 @@ sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
   <ItemGroup>
     <ClCompile Include="Crosshair.cpp" />
     <ClCompile Include="Enemigo.cpp" />
+    <ClCompile Include="EnemigoTipo1.cpp" />
+    <ClCompile Include="EnemigoTipo2.cpp" />
     <ClCompile Include="Juego.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Crosshair.h" />
     <ClInclude Include="Enemigo.h" />
+    <ClInclude Include="EnemigoTipo1.h" />
+    <ClInclude Include="EnemigoTipo2.h" />
     <ClInclude Include="Juego.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

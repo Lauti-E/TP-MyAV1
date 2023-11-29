@@ -11,10 +11,6 @@ Juego::Juego() : ventana(VideoMode(800, 600), "Trabajo práctico integrador.") {
 	//Inicializar la mira.
 	crosshair.Inicializar();
 
-	//Inicializar el enemigo y su posición.
-	enemigo.InicializarTexturas();
-	enemigo.PosicionInicial();
-
 	//Ocultar el cursor.
 	ventana.setMouseCursorVisible(false);
 }
@@ -23,7 +19,7 @@ void Juego::General() {
 	while (ventana.isOpen()) {
 		ProcesarEventos();
 
-		enemigo.Actualizar();
+		EnemigoAleatorio();
 
 		Dibujar();
 	}
@@ -43,10 +39,10 @@ void Juego::ProcesarEventos() {
 			Vector2i mousePos = Mouse::getPosition(ventana);
 
 			//Verificar si el clic fue dentro del sprite del enemigo.
-			if (enemigo.EnemigoClick(mousePos.x, mousePos.y)) {
+			if (enemigo->EnemigoClick(mousePos.x, mousePos.y)) {
 				
 				//"Eliminar" el enemigo.
-				enemigo.EliminarEnemigo();
+				enemigo->EliminarEnemigo();
 			}
 		}
 	}
@@ -56,8 +52,29 @@ void Juego::Dibujar() {
 	ventana.clear(Color::White);
 
 	ventana.draw(sprFondo);
-	enemigo.DibujarEnemigos(ventana);
+
+	enemigo->DibujarEnemigos(ventana);
+
 	crosshair.Dibujar(ventana);
 
 	ventana.display();
+}
+
+void Juego::EnemigoAleatorio() {
+	//Generar un número aleatorio (0 o 1).
+	int tipEnemigo = rand() % 2;
+
+	if (tipEnemigo == 0) {
+		delete enemigo; //Liberar memoria.
+		enemigo = new EnemigoTipo1();
+	}
+	else {
+		delete enemigo; //Liberar memoria.
+		enemigo = new EnemigoTipo2();
+	}
+
+	//Inicializar el enemigo creado.
+	enemigo->InicializarTexturas();
+	enemigo->PosicionInicial();
+	enemigo->Actualizar();
 }

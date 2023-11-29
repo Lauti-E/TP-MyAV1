@@ -1,8 +1,12 @@
 #pragma once
+#include <cstdlib>
 #include <SFML/Graphics.hpp>
 
 #include "Crosshair.h"
+
 #include "Enemigo.h"
+#include "EnemigoTipo1.h"
+#include "EnemigoTipo2.h"
 
 using namespace sf;
 
@@ -13,7 +17,7 @@ private:
 	Sprite sprFondo;
 
 	Crosshair crosshair;
-	Enemigo enemigo;
+	Enemigo* enemigo;
 public:
 	//Constructor.
 	Juego();
@@ -26,4 +30,7 @@ public:
 
 	//Método para dibujar en la ventana.
 	void Dibujar();
+
+	//Método para crear un enemigo aleatorio.
+	void EnemigoAleatorio();
 };

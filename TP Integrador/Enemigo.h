@@ -8,9 +8,9 @@ using namespace sf;
 using namespace std;
 
 class Enemigo {
-private:
-	Texture texEnemigo1;
-	Sprite sprEnemigo1;
+protected:
+	Texture texEnemigo;
+	Sprite sprEnemigo;
 
 	//Variables para definir el tiempo de las apariciones de los enemigos.
 	Clock temp;
@@ -20,21 +20,21 @@ public:
 	Enemigo();
 
 	//Método para inicializar las texturas.
-	void InicializarTexturas();
+	virtual void InicializarTexturas() = 0;
 
 	//Método para dibujar los enemigos en la ventana.
-	void DibujarEnemigos(RenderWindow& ven);
+	virtual void DibujarEnemigos(RenderWindow& ven) = 0;
 
 	//Método para establecer la posición inicial aleatoria.
-	void PosicionInicial();
+	virtual void PosicionInicial() = 0;
 
 	//Método para verificar si el enemigo fue clickeado.
-	bool EnemigoClick(float x, float y) const;
+	virtual bool EnemigoClick(float x, float y) const = 0;
 
 	//Método para eliminar el enemigo.
-	void EliminarEnemigo();
+	virtual void EliminarEnemigo() = 0;
 
 	//Método para manejar la lógica de aparicón del enemigo.
-	void Actualizar();
+	virtual void Actualizar() = 0;
 };
 
