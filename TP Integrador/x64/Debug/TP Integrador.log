@@ -1,12 +1,16 @@
-﻿  Juego.cpp
-C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(42,50): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+﻿  Enemigo.cpp
+C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Enemigo.cpp(4,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Juego.cpp
+C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(43,49): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
           with
           [
               T=int
           ]
-C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(42,38): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(43,37): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
           with
           [
               T=int
           ]
+  main.cpp
+  Generando código...
   TP Integrador.vcxproj -> C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\x64\Debug\TP Integrador.exe

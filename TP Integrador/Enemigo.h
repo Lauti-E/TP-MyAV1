@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 
 #include <SFML/Graphics.hpp>
 
@@ -8,33 +9,30 @@ using namespace sf;
 using namespace std;
 
 class Enemigo {
-protected:
+private:
 	Texture texEnemigo;
 	Sprite sprEnemigo;
 
-	//Variables para definir el tiempo de las apariciones de los enemigos.
 	Clock temp;
-	float tiempo;
 public:
 	//Constructor.
 	Enemigo();
 
 	//Método para inicializar las texturas.
-	virtual void InicializarTexturas() = 0;
+	void InicializarTexturas();
 
 	//Método para dibujar los enemigos en la ventana.
-	virtual void DibujarEnemigos(RenderWindow& ven) = 0;
+	void DibujarEnemigos(RenderWindow& ven);
 
 	//Método para establecer la posición inicial aleatoria.
-	virtual void PosicionInicial() = 0;
+	void PosicionInicial();
 
 	//Método para verificar si el enemigo fue clickeado.
-	virtual bool EnemigoClick(float x, float y) const = 0;
+	bool EnemigoClick(float x, float y) const;
 
 	//Método para eliminar el enemigo.
-	virtual void EliminarEnemigo() = 0;
+	void EliminarEnemigo();
 
-	//Método para manejar la lógica de aparicón del enemigo.
-	virtual void Actualizar() = 0;
+	void ReiniciarReloj() { temp.restart(); }
 };
 
