@@ -14,6 +14,9 @@ Juego::Juego() : ventana(VideoMode(800, 600), "Trabajo práctico integrador.") {
 	enemigo.InicializarTexturas();
 	enemigo.PosicionInicial();
 
+	enemigo2.InicializarTexturas();
+	enemigo2.PosicionInicial();
+
 	//Ocultar el cursor.
 	ventana.setMouseCursorVisible(false);
 }
@@ -47,6 +50,14 @@ void Juego::ProcesarEventos() {
 
 				enemigo.ReiniciarReloj();
 			}
+
+			if (enemigo2.EnemigoClick(mousePos.x, mousePos.y)) {
+
+				//"Eliminar" el enemigo.
+				enemigo2.EliminarEnemigo();
+
+				enemigo2.ReiniciarReloj();
+			}
 		}
 	}
 }
@@ -57,6 +68,7 @@ void Juego::Dibujar() {
 	ventana.draw(sprFondo);
 
 	enemigo.DibujarEnemigos(ventana);
+	enemigo2.DibujarEnemigos(ventana);
 
 	crosshair.Dibujar(ventana);
 

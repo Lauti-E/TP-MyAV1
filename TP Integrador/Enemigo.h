@@ -5,6 +5,8 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "Enemigo2.h"
+
 using namespace sf;
 using namespace std;
 

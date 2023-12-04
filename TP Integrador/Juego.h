@@ -3,6 +3,7 @@
 
 #include "Crosshair.h"
 #include "Enemigo.h"
+#include "Enemigo2.h"
 
 using namespace sf;
 
@@ -14,6 +15,7 @@ private:
 
 	Crosshair crosshair;
 	Enemigo enemigo;
+	Enemigo2 enemigo2;
 public:
 	//Constructor.
 	Juego();
