@@ -4,6 +4,7 @@
 #include "Crosshair.h"
 #include "Enemigo.h"
 #include "Enemigo2.h"
+#include "Inocente.h"
 
 using namespace sf;
 
@@ -14,8 +15,10 @@ private:
 	Sprite sprFondo;
 
 	Crosshair crosshair;
+
 	Enemigo enemigo;
 	Enemigo2 enemigo2;
+	Inocente inocente;
 public:
 	//Constructor.
 	Juego();

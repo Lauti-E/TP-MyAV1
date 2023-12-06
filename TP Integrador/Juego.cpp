@@ -17,6 +17,9 @@ Juego::Juego() : ventana(VideoMode(800, 600), "Trabajo práctico integrador.") {
 	enemigo2.InicializarTexturas();
 	enemigo2.PosicionInicial();
 
+	inocente.InicializarTexturas();
+	inocente.PosicionInicial();
+
 	//Ocultar el cursor.
 	ventana.setMouseCursorVisible(false);
 }
@@ -58,6 +61,14 @@ void Juego::ProcesarEventos() {
 
 				enemigo2.ReiniciarReloj();
 			}
+
+			//Verificar si el clic fue dentro del sprite del inocente.
+			if (inocente.InocenteClick(mousePos.x, mousePos.y)) {
+				//"Eliminar" el inocente.
+				inocente.EliminarInocente();
+				
+				inocente.ReiniciarReloj();
+			}
 		}
 	}
 }
@@ -69,6 +80,7 @@ void Juego::Dibujar() {
 
 	enemigo.DibujarEnemigos(ventana);
 	enemigo2.DibujarEnemigos(ventana);
+	inocente.DibujarInocente(ventana);
 
 	crosshair.Dibujar(ventana);
 

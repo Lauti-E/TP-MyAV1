@@ -1,0 +1,36 @@
+#pragma once
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+#include <SFML/Graphics.hpp>
+
+using namespace sf;
+using namespace std;
+
+class Inocente {
+private:
+	Texture texInocente;
+	Sprite sprInocente;
+
+	Clock temp;
+public:
+	Inocente();
+
+	//Método para inicializar las texturas.
+	void InicializarTexturas();
+
+	//Método para dibujar los inocentes en la ventana.
+	void DibujarInocente(RenderWindow& ven);
+
+	//Método para establecer la posición inicial aleatoria.
+	void PosicionInicial();
+
+	//Método para verificar si el inocente fue clickeado.
+	bool InocenteClick(float x, float y);
+
+	void EliminarInocente();
+
+	void ReiniciarReloj() { temp.restart(); }
+};
+
