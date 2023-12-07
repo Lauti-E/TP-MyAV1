@@ -88,28 +88,27 @@ void Juego::ProcesarEventos() {
 		}
 	}
 
-	do {
+	if (ColisionEnemigos(enemigo, enemigo2)) {
 		enemigo.PosicionInicial();
-	} while (ColisionEnemigos(enemigo, enemigo2));
-
-	enemigo2.PosicionInicial();
+	}
 }
 
 void Juego::Dibujar() {
 	ventana.clear(Color::White);
 
-	ventana.draw(sprFondo);
+	ventana.draw(sprFondo); //Dibujar el fondo.
 
-	enemigo.DibujarEnemigos(ventana);
-	enemigo2.DibujarEnemigos(ventana);
+	enemigo.DibujarEnemigos(ventana); //Dibujar el enemigo 1.
+	enemigo2.DibujarEnemigos(ventana); //Dibujar el enemigo 2.
 
-	inocente.DibujarInocente(ventana);
+	inocente.DibujarInocente(ventana); //Dibujar el inocente.
 
-	crosshair.Dibujar(ventana);
+	crosshair.Dibujar(ventana); //Dibujar el crosshair.
 
 	ventana.display();
 }
 
 bool Juego::ColisionEnemigos(const Enemigo& e1, const Enemigo2& e2) const {
+	//Detectar si los enemigos intersectan entre sí para no posicionarlos.
 	return e1.GetSprite().getGlobalBounds().intersects(e2.GetSprite().getGlobalBounds());
 }

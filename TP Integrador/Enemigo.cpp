@@ -21,7 +21,7 @@ void Enemigo::InicializarTexturas() {
 }
 
 void Enemigo::DibujarEnemigos(RenderWindow& ven) {
-
+	//Se dibujan los enemigos cada 2 segundos.
 	if (temp.getElapsedTime().asSeconds() >= 2.0f) {
 		PosicionInicial();
 	}

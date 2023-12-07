@@ -33,7 +33,9 @@ public:
 	//Método para eliminar el enemigo.
 	void EliminarEnemigo();
 
+	//Método para reiniciar el reloj.
 	void ReiniciarReloj() { temp.restart(); }
 
+	//Método Sprite para retornar el sprite del enemigo.
 	const Sprite& GetSprite() const { return sprEnemigo2; }
 };

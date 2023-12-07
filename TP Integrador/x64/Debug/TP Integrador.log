@@ -1,8 +1,4 @@
-﻿  Enemigo.cpp
-C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Enemigo.cpp(4,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-  Enemigo2.cpp
-C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Enemigo2.cpp(4,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-  Juego.cpp
+﻿  Juego.cpp
 C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(5,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
 C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(53,49): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
           with
@@ -34,6 +30,4 @@ C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integr
           [
               T=int
           ]
-  main.cpp
-  Generando código...
   TP Integrador.vcxproj -> C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\x64\Debug\TP Integrador.exe
