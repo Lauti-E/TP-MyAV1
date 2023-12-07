@@ -2,7 +2,6 @@
 
 Inocente::Inocente() {
 	srand(time(NULL));
-	temp.restart();
 }
 
 void Inocente::InicializarTexturas() {
@@ -55,8 +54,4 @@ void Inocente::EliminarInocente() {
 
 	//"Eliminar" al inocente, moverlo fuera de la ventana.
 	sprInocente.setPosition(-1000.f, -1000.f);
-
-	if (temp.getElapsedTime().asSeconds() >= 3) {
-		sprInocente.setPosition(-1000.f, -1000.f);
-	}
 }

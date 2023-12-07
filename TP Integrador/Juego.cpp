@@ -2,6 +2,8 @@
 
 Juego::Juego() : ventana(VideoMode(800, 600), "Trabajo práctico integrador.") {
 
+	srand(time(NULL));
+
 	//Cargamos el fondo.
 	texFondo.loadFromFile("Imagenes//Escenario.png");
 	sprFondo.setTexture(texFondo);
@@ -19,6 +21,8 @@ Juego::Juego() : ventana(VideoMode(800, 600), "Trabajo práctico integrador.") {
 
 	inocente.InicializarTexturas();
 	inocente.PosicionInicial();
+
+	temp.restart();
 
 	//Ocultar el cursor.
 	ventana.setMouseCursorVisible(false);
@@ -55,22 +59,40 @@ void Juego::ProcesarEventos() {
 			}
 
 			if (enemigo2.EnemigoClick(mousePos.x, mousePos.y)) {
-
 				//"Eliminar" el enemigo.
 				enemigo2.EliminarEnemigo();
 
 				enemigo2.ReiniciarReloj();
 			}
 
-			//Verificar si el clic fue dentro del sprite del inocente.
 			if (inocente.InocenteClick(mousePos.x, mousePos.y)) {
-				//"Eliminar" el inocente.
+				//"Eliminar" al inocente.
 				inocente.EliminarInocente();
-				
+
 				inocente.ReiniciarReloj();
 			}
 		}
 	}
+
+	//Si el número aleatorio es igual a 3, intenta posicionar al inocente.
+	if (temp.getElapsedTime().asSeconds() >= 4.0f) {
+		//Reinicia el temporizador.
+		temp.restart();
+
+		//Genera un número aleatorio entre 0 y 4.
+		int valAleatorio = rand() % 5;
+
+		//Si el número aleatorio es igual a 3, se posiciona al inocente.
+		if (valAleatorio == 3) {
+			inocente.PosicionInicial();
+		}
+	}
+
+	do {
+		enemigo.PosicionInicial();
+	} while (ColisionEnemigos(enemigo, enemigo2));
+
+	enemigo2.PosicionInicial();
 }
 
 void Juego::Dibujar() {
@@ -80,9 +102,14 @@ void Juego::Dibujar() {
 
 	enemigo.DibujarEnemigos(ventana);
 	enemigo2.DibujarEnemigos(ventana);
+
 	inocente.DibujarInocente(ventana);
 
 	crosshair.Dibujar(ventana);
 
 	ventana.display();
+}
+
+bool Juego::ColisionEnemigos(const Enemigo& e1, const Enemigo2& e2) const {
+	return e1.GetSprite().getGlobalBounds().intersects(e2.GetSprite().getGlobalBounds());
 }

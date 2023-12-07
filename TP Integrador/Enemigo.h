@@ -36,5 +36,7 @@ public:
 	void EliminarEnemigo();
 
 	void ReiniciarReloj() { temp.restart(); }
+
+	const Sprite& GetSprite() const { return sprEnemigo; }
 };
 

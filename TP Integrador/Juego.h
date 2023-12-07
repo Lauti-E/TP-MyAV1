@@ -19,6 +19,8 @@ private:
 	Enemigo enemigo;
 	Enemigo2 enemigo2;
 	Inocente inocente;
+
+	Clock temp;
 public:
 	//Constructor.
 	Juego();
@@ -31,4 +33,6 @@ public:
 
 	//Método para dibujar en la ventana.
 	void Dibujar();
+
+	bool ColisionEnemigos(const Enemigo& e1, const Enemigo2& e2) const;
 };
