@@ -14,6 +14,7 @@ private:
 	Sprite sprInocente;
 
 	Clock temp;
+	Clock relojInocente;
 public:
 	Inocente();
 
@@ -32,5 +33,12 @@ public:
 	void EliminarInocente();
 
 	void ReiniciarReloj() { temp.restart(); }
+
+	void DesaparecerInocente();
+
+	Clock GetReloj() const;
+
+	//Método Sprite para retornar el sprite del inocente.
+	const Sprite& GetSprite() const { return sprInocente; }
 };
 

@@ -82,14 +82,25 @@ void Juego::ProcesarEventos() {
 		//Genera un número aleatorio entre 0 y 4.
 		int valAleatorio = rand() % 5;
 
+		cout << "El numero es: " << valAleatorio << endl;
+
 		//Si el número aleatorio es igual a 3, se posiciona al inocente.
-		if (valAleatorio == 3) {
+		if (valAleatorio == 0 || valAleatorio == 2 || valAleatorio == 4) {
 			inocente.PosicionInicial();
 		}
 	}
 
+	//Verificar colisión entre los dos enemigos.
 	if (ColisionEnemigos(enemigo, enemigo2)) {
 		enemigo.PosicionInicial();
+	}
+
+	//Verificar colisión entre el inocente y los enemigos.
+	if (ColisionInocenteEnemigo(inocente, enemigo) || ColisionInocenteEnemigo2(inocente, enemigo2)) {
+		inocente.PosicionInicial();
+
+		enemigo.PosicionInicial();
+		enemigo2.PosicionInicial();
 	}
 }
 
@@ -111,4 +122,12 @@ void Juego::Dibujar() {
 bool Juego::ColisionEnemigos(const Enemigo& e1, const Enemigo2& e2) const {
 	//Detectar si los enemigos intersectan entre sí para no posicionarlos.
 	return e1.GetSprite().getGlobalBounds().intersects(e2.GetSprite().getGlobalBounds());
+}
+
+bool Juego::ColisionInocenteEnemigo(const Inocente& in, const Enemigo& e1) const {
+	return inocente.GetSprite().getGlobalBounds().intersects(enemigo.GetSprite().getGlobalBounds());
+}
+
+bool Juego::ColisionInocenteEnemigo2(const Inocente& in, const Enemigo2& e2) const {
+	return inocente.GetSprite().getGlobalBounds().intersects(enemigo2.GetSprite().getGlobalBounds());
 }

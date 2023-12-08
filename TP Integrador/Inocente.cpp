@@ -27,11 +27,17 @@ void Inocente::DibujarInocente(RenderWindow& ven) {
 void Inocente::PosicionInicial() {
 	//Definir 4 posiciones posibles.
 	Vector2f posiciones[] = {
+		
 		{200.f, 200.f}, //Posición 1.
+		{-1000.f, -1000.f}, //Posición para que no sea contínua la aparición en ventana.
 		{600.f, 200.f}, //Posición 2.
+		{-1001.f, -1001.f}, //Posición para que no sea contínua la aparición en ventana.
 		{175.f, 410.f}, //Posición 3.
+		{-1002.f, -1002.f}, //Posición para que no sea contínua la aparición en ventana.
 		{640.f, 410.f}, //Posición 4.
-		{400.f, 450.f}  //Posición 5.
+		{-1003.f, -1003.f}, //Posición para que no sea contínua la aparición en ventana.
+		{400.f, 450.f},  //Posición 5.
+		{-1004.f, -1004.f} //Posición para que no sea contínua la aparición en ventana.
 	};
 
 	//Posición al azar.
@@ -54,4 +60,16 @@ void Inocente::EliminarInocente() {
 
 	//"Eliminar" al inocente, moverlo fuera de la ventana.
 	sprInocente.setPosition(-1000.f, -1000.f);
+}
+
+void Inocente::DesaparecerInocente() {
+	//Reiniciar el temporizador.
+	temp.restart();
+
+	//"Eliminar" al inocente, moverlo fuera de la ventana.
+	sprInocente.setPosition(-1000.f, -1000.f);
+}
+
+Clock Inocente::GetReloj() const {
+	return relojInocente;
 }
