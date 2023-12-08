@@ -10,10 +10,10 @@ using namespace std;
 
 class Enemigo2 {
 private:
-	Texture texEnemigo2;
-	Sprite sprEnemigo2;
+	Texture texEnemigo2; //Textura del enemigo 2.
+	Sprite sprEnemigo2; //Sprite del enemigo 2.
 
-	Clock temp;
+	Clock temp; //Variable Clock para reiniciar el temporizador.
 public:
 	//Constructor.
 	Enemigo2();

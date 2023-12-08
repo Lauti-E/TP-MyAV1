@@ -26,6 +26,22 @@ Juego::Juego() : ventana(VideoMode(800, 600), "Trabajo práctico integrador.") {
 
 	//Ocultar el cursor.
 	ventana.setMouseCursorVisible(false);
+	
+	//Puntaje en 0.
+	puntaje = 0;
+
+	//Cargar la fuente.
+	if (!fuente.loadFromFile("Fuentes//Fuente.ttf")) {
+		//Mensaje de error.
+		cout << "Error al cargar la fuente." << endl;
+	}
+
+	//Configuramos la fuente.
+	textoPuntaje.setFont(fuente);
+	textoPuntaje.setCharacterSize(24);
+	textoPuntaje.setFillColor(Color::Black);
+	textoPuntaje.setPosition(25.f, 25.f);
+	textoPuntaje.setString("Puntaje: " + to_string(puntaje)); //Pasamos a string el puntaje.
 }
 
 void Juego::General() {
@@ -82,8 +98,6 @@ void Juego::ProcesarEventos() {
 		//Genera un número aleatorio entre 0 y 4.
 		int valAleatorio = rand() % 5;
 
-		cout << "El numero es: " << valAleatorio << endl;
-
 		//Si el número aleatorio es igual a 3, se posiciona al inocente.
 		if (valAleatorio == 0 || valAleatorio == 2 || valAleatorio == 4) {
 			inocente.PosicionInicial();
@@ -108,6 +122,8 @@ void Juego::Dibujar() {
 	ventana.clear(Color::White);
 
 	ventana.draw(sprFondo); //Dibujar el fondo.
+
+	ventana.draw(textoPuntaje); //Dibujar la fuente.
 
 	enemigo.DibujarEnemigos(ventana); //Dibujar el enemigo 1.
 	enemigo2.DibujarEnemigos(ventana); //Dibujar el enemigo 2.

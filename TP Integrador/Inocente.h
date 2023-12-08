@@ -10,12 +10,13 @@ using namespace std;
 
 class Inocente {
 private:
-	Texture texInocente;
-	Sprite sprInocente;
+	Texture texInocente; //Textura para el inocente.
+	Sprite sprInocente; //Sprite para el inocente.
 
-	Clock temp;
-	Clock relojInocente;
+	Clock temp; //Variable Clock para reiniciar el temporizador.
+	Clock relojInocente; //Variable Clock para la desaparición del inocente cada x tiempo.
 public:
+	//Constructor.
 	Inocente();
 
 	//Método para inicializar las texturas.

@@ -1,31 +1,31 @@
 ﻿  Juego.cpp
 C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(5,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(53,49): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(69,49): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
           with
           [
               T=int
           ]
-C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(53,37): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(69,37): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
           with
           [
               T=int
           ]
-C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(61,50): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(77,50): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
           with
           [
               T=int
           ]
-C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(61,38): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(77,38): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
           with
           [
               T=int
           ]
-C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(68,51): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(84,51): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
           with
           [
               T=int
           ]
-C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(68,39): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\lauta\Tec. Programación y diseño videojuegos\Trabajo Práctico Integrador\Trabajo-Integrador-MyAV1\TP Integrador\Juego.cpp(84,39): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
           with
           [
               T=int

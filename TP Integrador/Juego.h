@@ -10,17 +10,23 @@ using namespace sf;
 
 class Juego {
 private:
-	RenderWindow ventana;
-	Texture texFondo;
-	Sprite sprFondo;
+	RenderWindow ventana; //Ventana.
+	Texture texFondo; //Textura del fondo.
+	Sprite sprFondo; //Sprite del fondo.
 
+	//Objeto para el crosshair.
 	Crosshair crosshair;
 
+	//Objetos para llamar a los métodos de los enemigos y el inocente.
 	Enemigo enemigo;
 	Enemigo2 enemigo2;
 	Inocente inocente;
 
-	Clock temp;
+	Clock temp; //Variable Clock para reiniciar el temporizador.
+
+	int puntaje; //Variable para almacenar el puntaje.
+	Font fuente; //Variable Font para la fuente.
+	Text textoPuntaje; //Variable Text para el texto.
 public:
 	//Constructor.
 	Juego();
