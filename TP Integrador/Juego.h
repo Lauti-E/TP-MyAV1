@@ -25,8 +25,13 @@ private:
 	Clock temp; //Variable Clock para reiniciar el temporizador.
 
 	int puntaje; //Variable para almacenar el puntaje.
+	int vidas; //Variable para almacenar las vidas.
+	bool gameOver; //Variable booleana para saber cuando termina el juego.
+
 	Font fuente; //Variable Font para la fuente.
 	Text textoPuntaje; //Variable Text para el texto.
+	Text textoVidas; //Variable Text para las vidas.
+	Text textoGameOver; //Variable Text para fin de juego.
 public:
 	//Constructor.
 	Juego();
@@ -46,4 +51,16 @@ public:
 	bool ColisionInocenteEnemigo(const Inocente& in, const Enemigo& e1) const;
 
 	bool ColisionInocenteEnemigo2(const Inocente& in, const Enemigo2& e2) const;
+
+	//Método para la configuración de los textos.
+	void ConfigTextos();
+
+	//Método para actualizar el puntaje.
+	void ActualizarPuntaje();
+
+	//Método para actualizar las vidas.
+	void ActualizarVidas();
+
+	//Método para la condición de Game Over.
+	void GameOver();
 };
